@@ -3,7 +3,7 @@ const client = new Client({
     host: 'localhost',
     port: 5432,
     user: 'sayertindall',
-    database: 'sayertindall',
+    database: 'flirt',
     password: '1111',
 });
 
@@ -15,3 +15,4 @@ client.connect(err => {
     }
 });
 
+module.exports = { client };

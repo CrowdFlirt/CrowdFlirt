@@ -7,14 +7,6 @@ aws.config.update({
     secretAccessKey: process.env.AWSSecretKey
 });
 
-aws.config.getCredentials(function(err) {
-    if (err) console.log("Error!", err.stack);
-    // credentials not loaded
-    else {
-        console.log("Access key:", aws.config.credentials.accessKeyId);
-        console.log("Secret access key:", aws.config.credentials.secretAccessKey);
-    }
-});
 
 const BUCKET = process.env.Bucket;
 // Now lets export this function so we can call it from somewhere else
